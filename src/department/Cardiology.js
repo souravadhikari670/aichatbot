@@ -6,7 +6,7 @@ export default class Cardiology extends React.Component{
     super( props )
     this.state = {
       isLoaded: false,
-      doctorList: ""
+      doctorList: []
     }
   }
   componentDidMount(){
@@ -32,6 +32,7 @@ export default class Cardiology extends React.Component{
           <h1>Data is Loading....</h1>
         )
       }
+      console.log( doctorList )
 
     return(
 <div className="container mt-5">
