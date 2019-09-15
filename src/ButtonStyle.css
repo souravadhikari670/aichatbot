@@ -1,0 +1,12 @@
+#btnMessangerIcon{
+    font-size: 50px;
+}
+#btnMessanger{
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+    box-shadow: 0px 5px 10px 0px #4C4B4B !important;
+}
