@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style.css'
 
-export default class Admin extends React.Component{
+export default class AdddDoctor extends React.Component{
 
     constructor( props ){
         super( props )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+
 export default class Login extends React.Component {
     constructor( props ){
         super( props )
@@ -8,7 +9,8 @@ export default class Login extends React.Component {
             adminPassword: "12345",
             authenticate: false,
             username: "",
-            password: ""
+            password: "",
+            category: ""
         }
     }
 
@@ -20,7 +22,11 @@ export default class Login extends React.Component {
         //check admin access
         if( this.state.username === this.state.adminUsername ){
             if( this.state.password === this.state.adminPassword ){
-               this.setState({authenticate: true})
+                if( this.state.category !== "")
+                    this.setState({authenticate: true})
+                else{
+                    alert('Please select category')
+                }    
             }else{
                 alert('Incorrect Password')
             }
@@ -31,13 +37,16 @@ export default class Login extends React.Component {
 
     render() {
 
-        const { authenticate } = this.state
+        const { authenticate, category } = this.state
         if( authenticate === true ){
-            return <Redirect to ="/admin" />
+            if( category === 'doctor')
+            return <Redirect to ="/admin/doctor" />
+            else if( category === 'test')
+                return <Redirect to='/admin/test' />
         }
 
         return (
-            <div className="modal fade" id="adminLoginModal" tabIndex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div className="modal fade" id="adminLoginModal"role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div className="modal-dialog" role="document">
             <div className="modal-content">
                 <div className="modal-header">
@@ -75,6 +84,27 @@ export default class Login extends React.Component {
                         onChange = {this.changeHandler}
                         />
                     </div>
+                    <ul className="list-group mb-4">
+                        <li className="list-group-item bg-dark text-light"><strong>Category</strong></li>
+                        <li className="list-group-item">
+                            <div className="custom-control custom-radio mb-3 float-left">
+                                <input type="radio" name="category" id="doctor" value="doctor"
+                                                className="custom-control-input" 
+                                                onChange = {this.changeHandler}
+                                                />
+                                <label htmlFor="doctor" className="custom-control-label">Add Doctor</label>
+                            </div>
+                        </li>
+                        <li className="list-group-item">
+                            <div className="custom-control custom-radio mb-3 float-left">
+                                <input type="radio" name="category" id="test" value="test"
+                                            className="custom-control-input" 
+                                            onChange = {this.changeHandler}
+                                            />
+                                <label htmlFor="test" className="custom-control-label">Add Test</label>
+                            </div>
+                        </li>
+                    </ul>
                    <div className="form-group">
                         <button className="btn btn-lg btn-success" data-dismiss="modal"
                             onClick = {this.accessHandler}
