@@ -65,7 +65,7 @@ export default class FindDoctor extends React.Component{
             if( department === 'Neurology' ){
                 return <Redirect to='/Neurology' />
             }
-            if( department === 'Oral Health Sciences(Dental)' ){
+            if( department === 'Dental' ){
                 return <Redirect to='/Dental' />
             }
             if( department === 'Gastroenterology' ){
@@ -77,7 +77,7 @@ export default class FindDoctor extends React.Component{
             if( department === 'Opthalmology' ){
                 return <Redirect to='/Opthalmology' />
             }
-            if( department === 'Otolaryngology (ENT)' ){
+            if( department === 'ENT' ){
                 return <Redirect to='/Otolaryngology' />
             }
         }

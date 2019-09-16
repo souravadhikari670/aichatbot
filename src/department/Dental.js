@@ -15,7 +15,7 @@ export default class Dental extends React.Component{
 
    getData = () =>{
 
-    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=Oral Health Sciences(Dental)')
+    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=Dental')
     .then(result => result.json())
     .then(mainDoctorList =>{
       this.setState({

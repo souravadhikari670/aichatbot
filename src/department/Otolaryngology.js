@@ -15,7 +15,7 @@ export default class Otolaryngology extends React.Component{
 
    getData = () =>{
 
-    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=Otolaryngology (ENT)')
+    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=ENT')
     .then(result => result.json())
     .then(mainDoctorList =>{
       this.setState({
