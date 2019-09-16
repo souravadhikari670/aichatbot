@@ -5,7 +5,7 @@ export default function Buttons() {
     return(
         <div className="mt-3">
 
-            <button className="btn btn-danger mr-4"data-toggle="modal" data-target="#adminLoginModal">Admin Login</button>
+            {/* <button className="btn btn-danger mr-4"data-toggle="modal" data-target="#adminLoginModal">Admin Login</button> */}
             
             <Link to="/">
                 <button className="btn btn-primary mr-4">Home</button>
