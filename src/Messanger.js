@@ -7,15 +7,18 @@ import MessengerCustomerChat from 'react-messenger-customer-chat'
 // export default function Messanger(){
 //     return(
 
+export default class Messanger extends React.Component{
 
-ReactDOM.render(
-    <MessengerCustomerChat
-      pageId="101581574569880"
-      appId="851765041884531"
-      htmlRef="Hello"
-    />,
-    document.getElementById('root')
-  );
+    render(){
+        return(
+            <MessengerCustomerChat
+                pageId="101581574569880"
+                appId="851765041884531"
+                htmlRef="Hello"
+                />
+        )
+    }
+}
 
         // <a href="https://m.me/101581574569880" target="_blank">
         //     <button className="btn btn-danger" id="btnMessanger" title="What can i help you?">
