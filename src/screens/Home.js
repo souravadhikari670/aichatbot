@@ -19,28 +19,28 @@ export default function Home(){
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                    <img src={require('../Pics/dental.jpg')}  className="d-block w-100" style={{height: 500}} alt="..." />
+                    <img src={require('../Pics/dental.jpg')}  className="d-block w-100" style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/Gastroenterology.jpg')}   className="d-block w-100" alt="..." />
+                    <img src={require('../Pics/Gastroenterology.jpg')}   className="d-block w-100" style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/neurology.jpg')}   className="d-block w-100" alt="..." />
+                    <img src={require('../Pics/neurology.jpg')}   className="d-block w-100" style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/ophthalmology.jpg')}   className="d-block w-100"style={{height: 520}} alt="..." />
+                    <img src={require('../Pics/ophthalmology.jpg')}   className="d-block w-100"style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/orthopaedics.jpg')}   className="d-block w-100" alt="..." />
+                    <img src={require('../Pics/orthopaedics.jpg')}   className="d-block w-100" style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/psychiatry.png')}   className="d-block w-100" alt="..." />
+                    <img src={require('../Pics/psychiatry.png')}   className="d-block w-100" style={{height: 480}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/radiotherapy.jpg')}   className="d-block w-100" style={{height: 520}} alt="..." />
+                    <img src={require('../Pics/radiotherapy.jpg')}   className="d-block w-100" style={{height: 500}} alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src={require('../Pics/surgery.jpg')}   className="d-block w-100" style={{height: 520}} alt="..." />
+                    <img src={require('../Pics/surgery.jpg')}   className="d-block w-100" style={{height: 500}} alt="..." />
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
