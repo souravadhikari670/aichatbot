@@ -13,7 +13,7 @@ export default function Header() {
                 <div className="ml-4" id="logoCon"></div>
                 </div>
                 <div className="col-md-4 d-flex justify-content-start">
-                    <span className="text-light" id="headerText">Welcome To PgiBot</span>
+                    <span className="text-light" id="headerText">PgiBot</span>
                 </div>
                 <div className="col-md-7">
                     <Buttons />
