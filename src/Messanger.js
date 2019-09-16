@@ -1,12 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import MessengerCustomerChat from 'react-messenger-customer-chat'
-
-// import './ButtonStyle.css'
-
-// export default function Messanger(){
-//     return(
-
 export default class Messanger extends React.Component{
 
     render(){
@@ -15,6 +8,7 @@ export default class Messanger extends React.Component{
                 pageId="101581574569880"
                 appId="851765041884531"
                 htmlRef="Hello"
+                
                 />
         )
     }

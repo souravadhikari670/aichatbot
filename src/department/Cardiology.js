@@ -6,7 +6,7 @@ export default class Cardiology extends React.Component{
     super( props )
     this.state = {
       isLoaded: false,
-      doctorList: []
+      doctorList: [],
     }
   }
   componentDidMount(){
@@ -24,32 +24,39 @@ export default class Cardiology extends React.Component{
       })
     })
   }
-    render(){
-      var { isLoaded, doctorList } = this.state
+render(){
+      const { isLoaded, doctorList } = this.state
       if( !isLoaded )
       {
         return(
           <h1>Data is Loading....</h1>
         )
       }
-      console.log( doctorList )
-
-    return(
+return(
 <div className="container mt-5">
   <h5 className="display-5 mb-3">You are looking for Cardiology..</h5>
 <table className="table table-striped">
-  <thead className="bg-dark text-light">
+  <thead className="bg-dark text-light"> 
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+    <th scope="col">Name</th>
+    <th scope="col">Designation</th>
+    <th scope="col">Contact</th>
+    <th scope="col">Location</th>
     </tr>
   </thead>
 
   <tbody>
     {
-      // console.log(doctorList.length)
+     doctorList.doctors.map( (doctor)=>{
+        return(
+        <tr key={doctor._id}>
+          <td>{doctor.name}</td>
+          <td>{doctor.designation}</td>
+          <td>{doctor.contact}</td>
+          <td>{doctor.location}</td>
+        </tr>
+        )
+     })
     }
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Orthopaedics extends React.Component{
+export default class Psychiatry extends React.Component{
 
   constructor( props ){
     super( props )
@@ -15,7 +15,7 @@ export default class Orthopaedics extends React.Component{
 
    getData = () =>{
 
-    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=Orthopaedics')
+    fetch('https://pgibotapi.herokuapp.com/getDepartmentDoctors?departmentName=Psychiatry')
     .then(result => result.json())
     .then(mainDoctorList =>{
       this.setState({
@@ -34,7 +34,7 @@ render(){
       }
 return(
 <div className="container mt-5">
-  <h5 className="display-5 mb-3">You are looking for Orthopaedics..</h5>
+  <h5 className="display-5 mb-3">You are looking for Psychiatry..</h5>
 <table className="table table-striped">
   <thead className="bg-dark text-light"> 
     <tr>
